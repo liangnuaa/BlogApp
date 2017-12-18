@@ -1,0 +1,25 @@
+{
+  "name": "blog-app",
+  "version": "1.0.0",
+  "description": "blog application for learning RESTful routes and Sementic UI purpose",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liangnuaa/BlogApp.git"
+  },
+  "author": "Liang Zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liangnuaa/BlogApp/issues"
+  },
+  "homepage": "https://github.com/liangnuaa/BlogApp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7"
+  }
+}
