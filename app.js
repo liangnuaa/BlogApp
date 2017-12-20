@@ -19,13 +19,25 @@ var blogSchema = new mongoose.Schema({
 
 var Blog = mongoose.model("Blog", blogSchema);
 
+Blog.create({
+    title: "A dog post",
+    image: "https://www.petmd.com/sites/default/files/bone-infection-dogs.jpg",
+    body: "Dog post blah blah blah blah!!!"
+});
+
 // RESTFUL ROUTES
 app.get("/", function(req, res) {
     res.redirect("/blogs");
 });
 
 app.get("/blogs", function (req, res) {
-    res.render("index");
+    Blog.find({}, function(err, blogs){
+        if(err){
+           console.log("ERROR!");
+        } else {
+          res.render("index", {blogs: blogs}); 
+        }
+    });
 });
 
 
